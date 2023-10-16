@@ -1,2 +1,2 @@
 # notes-center
-notes
+笔记
