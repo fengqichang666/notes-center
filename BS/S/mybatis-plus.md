@@ -47,9 +47,17 @@ set(String column, Object val): 设置字段值。
 其他方法和 QueryWrapper 类似，用于定义更新的条件。
 ```
 
-### LambdaQueryWrapper
+### QueryWrapper eq与LambdaQueryWrapper eq
 
 ```
+
+QueryWrapper和LambdaQueryWrapper的eq方法在功能上是相同的，都用于构建等值查询条件。它们的主要区别在于QueryWrapper的eq方法需要手动输入列名，而LambdaQueryWrapper的eq方法使用Lambda表达式自动生成属性名，提供了更好的类型安全性。
+在QueryWrapper中，eq方法接受两个参数，第一个参数是数据库表的列名，第二个参数是要匹配的值。例如：
+
+QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+queryWrapper.eq("name", "John");
+
+LambdaQueryWrapper通过类型推断来自动生成实体类的属性名，这样可以避免手动输入列名的错误。同时，由于使用了Lambda表达式，编译器可以在编译时检查属性名的正确性，提供了更好的类型安全性。
 LambdaQueryWrapper 的 eq 方法主要用于构建等于（=）的查询条件。eq 方法有两个重载版本，其用法如下：
 单个字段的等于条件：
 	eq(boolean condition, SFunction<T, ?> column, Object val)
