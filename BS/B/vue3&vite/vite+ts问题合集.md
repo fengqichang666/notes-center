@@ -169,3 +169,10 @@ import { type ComponentPublicInstance, ref } from 'vue'
 const ruleFormRef = ref<ComponentPublicInstance>()
 ```
 
+## 监听子组件生命周期
+
+```
+vue2写法  @hook:mounted = "tabMounted"
+vue3写法  @vnode-mounted= "tabMounted"
+```
+
