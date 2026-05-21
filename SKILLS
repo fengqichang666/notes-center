@@ -1,0 +1,7 @@
+https://github.com/rtk-ai/rtk 给命令行用的 节省token 示例：rtk git statusrtk npm run build rtk pytest -q
+
+总感觉AI在“胡编乱造”，需求没做对：先上 OpenSpec，确保方向正确。
+
+AI写的代码能跑就行，不讲流程，质量堪忧：引入 Superpowers，强制执行工程纪律。
+
+流程和需求都还行，但代码细节粗糙、架构混乱：使用 Matt Pocock Skills，进行精细化打磨。
